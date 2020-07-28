@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import NoodleComponent from './NoodleComponent'
+import EmersonComponent from './EmersonComponent'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Router>
+      <div className="App">
+        <h1>Who will it be?</h1>
+        <ul>
+          <li><Link to='/noodle'>Noodle(KU)</Link></li>
+          <li><Link to='/emerson'>Emerson(JS)</Link></li>
+        </ul>
+        <Route exact path='/noodle' component={NoodleComponent}/>
+        <Route exact path='/emerson' component={EmersonComponent}/>
+      </div>
+    </Router>
+            </div>
+        )
+    }
 }
-
 export default App;
