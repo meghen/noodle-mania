@@ -18,7 +18,7 @@ class App extends Component {
           <li><Link to='/noodle'>Noodle(KU)</Link></li>
           {/* <li><Link to='/emerson'>Emerson(JS)</Link></li> */}
           {/* <li onclick={QueueIt.validateUser(true)}><Link to='/emerson'>Emerson(JS)</Link></li> */}
-          <li onclick={this.runQueue}><Link to='/emerson'>Emerson(JS)</Link></li>
+          <li onclick={runQueue}><Link to='/emerson'>Emerson(JS)</Link></li>
         </ul>
         <Route exact path='/noodle' component={NoodleComponent}/>
         <Route exact path='/emerson' component={EmersonComponent}/>
