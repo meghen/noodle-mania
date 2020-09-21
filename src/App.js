@@ -1,11 +1,11 @@
-import React, {useEffect, Component} from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import NoodleComponent from './NoodleComponent'
 import EmersonComponent from './EmersonComponent'
 
 class App extends Component {
-  useEffect=()=>{
+  runQueue=()=>{
     window.QueueIt.validateUser();
   }
     render() {
@@ -18,7 +18,7 @@ class App extends Component {
           <li><Link to='/noodle'>Noodle(KU)</Link></li>
           {/* <li><Link to='/emerson'>Emerson(JS)</Link></li> */}
           {/* <li onclick={QueueIt.validateUser(true)}><Link to='/emerson'>Emerson(JS)</Link></li> */}
-          <li onclick={this.useEffect}><Link to='/emerson'>Emerson(JS)</Link></li>
+          <li onclick={this.runQueue}><Link to='/emerson'>Emerson(JS)</Link></li>
         </ul>
         <Route exact path='/noodle' component={NoodleComponent}/>
         <Route exact path='/emerson' component={EmersonComponent}/>
