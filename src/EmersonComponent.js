@@ -3,7 +3,7 @@ import Emerson from './Emerson.jpg'
 
 class EmersonComponent extends Component {
     componentDidMount=()=>{
-        // window.QueueIT.validateUser();
+        window.QueueIt.validateUser();
         console.log(window);
         
     }
