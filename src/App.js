@@ -5,9 +5,9 @@ import NoodleComponent from './NoodleComponent'
 import EmersonComponent from './EmersonComponent'
 
 class App extends Component {
-  // useEffect=()=>{
-  //   window.QueueIt.validateUser();
-  // }
+  useEffect=()=>{
+    window.QueueIt.validateUser();
+  }
     render() {
         return (
             <div>
