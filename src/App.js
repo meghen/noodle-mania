@@ -13,7 +13,8 @@ class App extends Component {
         <h1>Who will it be?</h1>
         <ul>
           <li><Link to='/noodle'>Noodle(KU)</Link></li>
-          <li onclick={QueueIt.validateUser(true)}><Link to='/emerson'>Emerson(JS)</Link></li>
+          <li><Link to='/emerson'>Emerson(JS)</Link></li>
+          {/* <li onclick={QueueIt.validateUser(true)}><Link to='/emerson'>Emerson(JS)</Link></li> */}
         </ul>
         <Route exact path='/noodle' component={NoodleComponent}/>
         <Route exact path='/emerson' component={EmersonComponent}/>
