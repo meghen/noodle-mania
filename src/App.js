@@ -5,9 +5,9 @@ import NoodleComponent from './NoodleComponent'
 import EmersonComponent from './EmersonComponent'
 
 class App extends Component {
-  runQueue=()=>{
-    window.QueueIt.validateUser();
-  }
+  // runQueue=()=>{
+  //   window.QueueIt.validateUser();
+  // }
     render() {
         return (
             <div>
@@ -15,10 +15,10 @@ class App extends Component {
       <div className="App">
         <h1>Who will it be?</h1>
         <ul>
-          <li><Link to='/noodle'>Noodle(KU)</Link></li>
-          {/* <li><Link to='/emerson'>Emerson(JS)</Link></li> */}
+          <li><Link to='/noodle'>Noodle(not protected)</Link></li>
+          <li><Link to='/emerson'>Emerson(protected)</Link></li>
           {/* <li onclick={QueueIt.validateUser(true)}><Link to='/emerson'>Emerson(JS)</Link></li> */}
-          <li onclick={runQueue}><Link to='/emerson'>Emerson(JS)</Link></li>
+          {/* <li onclick={runQueue}><Link to='/emerson'>Emerson(JS)</Link></li> */}
         </ul>
         <Route exact path='/noodle' component={NoodleComponent}/>
         <Route exact path='/emerson' component={EmersonComponent}/>
