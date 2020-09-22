@@ -1,6 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, Component} from 'react';
+// import './App.css';
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import NoodleComponent from './NoodleComponent'
+import EmersonComponent from './EmersonComponent'
 
 class App extends Component {
   // runQueue=()=>{
