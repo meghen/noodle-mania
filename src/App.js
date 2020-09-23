@@ -1,4 +1,4 @@
-import React, {useEffect, Component} from 'react';
+import React, {Component} from 'react';
 // import './App.css';
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import NoodleComponent from './NoodleComponent'
