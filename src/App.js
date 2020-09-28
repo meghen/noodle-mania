@@ -8,11 +8,11 @@ class App extends Component {
   // runQueue=()=>{
   //   window.QueueIt.validateUser();
   // }
-  componentDidMount=()=>{
-        window.QueueIt.validateUser();
-        console.log(window);
+  // componentDidMount=()=>{
+  //       window.QueueIt.validateUser();
+  //       console.log(window);
         
-  }
+  // }
     render() {
         return (
             <div>
