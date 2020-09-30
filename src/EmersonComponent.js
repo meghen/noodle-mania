@@ -17,7 +17,7 @@ class EmersonComponent extends Component {
         // just like $.ajax()
         axios({
           method: 'GET',
-          url: '/artist'
+          url: '/#/emerson'
         }).then((response) => {
           console.log(response);
           // response.data will be the array of artists
