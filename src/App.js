@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import NoodleComponent from './NoodleComponent'
 import EmersonComponent from './EmersonComponent'
+import {connect} from 'react-redux';
 
 class App extends Component {
     render() {
@@ -23,4 +24,4 @@ class App extends Component {
         )
     }
 }
-export default App;
+export default connect()(App);
