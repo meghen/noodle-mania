@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 
 const artistReducer = (state = [], action) => {
     if(action.type === 'GET_ARTISTS'){
-        return action.payload
+        return "string of action.payload"
     }
     return state;
 }
