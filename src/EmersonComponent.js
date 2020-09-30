@@ -10,6 +10,8 @@ class EmersonComponent extends Component {
     //    window.QueueIt.validateUser();
     // }
     componentDidMount() { // react Component method
+        console.log('checking window', window);
+        window.QueueIt.validateUser();
         this.refreshArtists();
       }
     
