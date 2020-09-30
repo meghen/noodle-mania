@@ -3,15 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import logger from 'redux-logger';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// Redux
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+
+const artistReducer = (state = [], action) => {
+    if(action.type === 'GET_ARTISTS'){
+        return action.payload
+    }
+    return state;
+}
+
+// The store is the big JavaScript Object that holds all of the information for our application
+const storeInstance = createStore(
+    combineReducers({
+        artistReducer,
+    }),
+    applyMiddleware(logger),
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Wrap our App in a Provider, this makes Redux available in
+// our entire application
+ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
