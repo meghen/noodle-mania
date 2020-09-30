@@ -11,7 +11,7 @@ app.use(bodyParser.json()); // needed for angular requests
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-app.use('/artist', artistRouter);
+app.use('/emerson', artistRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(port, function () {
