@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import Emerson from './Emerson.jpg'
-import ArtistListItem from '../ArtistListItem/ArtistListItem';
+import ArtistListItem from './ArtistListItem';
 import axios from 'axios';
 import {connect} from 'react-redux';
 
