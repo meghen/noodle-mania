@@ -5,7 +5,7 @@ const router = express.Router();
 // Using a array of data on the server, we will eventually
 // move this back into the database.
 const artists = require('../modules/artist.data');
-let nextId = artists.length;
+// let nextId = artists.length;
 
 router.delete('/:id', (req, res) => {    
     // TODO: Use filter to remove the artist
