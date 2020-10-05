@@ -5,10 +5,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 class EmersonComponent extends Component {
-    //   componentDidMount = () => {
-    //    console.log('checking window', window);
-    //    window.QueueIt.validateUser();
-    // }
+       componentDidMount = () => {
+        console.log('checking window', window);
+        window.QueueIt.validateUser();
+     }
     // componentDidMount() { // react Component method
     //     console.log('checking window', window);
     //     window.QueueIt.validateUser();
