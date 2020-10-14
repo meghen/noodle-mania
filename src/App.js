@@ -13,8 +13,8 @@ class App extends Component {
       <div className="App">
         <h1>Who will it be?</h1>
         <ul>
-          <li><Link to='/noodle'>Noodle(not protected)</Link></li>
-          <li><Link to='/emerson'>Emerson(protected)</Link></li>
+          <li><Link to='/noodle'>Noodle</Link></li>
+          <li><Link to='/emerson'>Emerson</Link></li>
         </ul>
         <Route exact path='/noodle' component={NoodleComponent}/>
         <Route exact path='/emerson' component={EmersonComponent}/>
