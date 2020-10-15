@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 class NoodleComponent extends Component {
     componentDidMount = () => {
-        console.log('checking window', window);
+        // console.log('checking window', window);
         window.QueueIt.validateUser();
     }
     render() {

@@ -10,23 +10,19 @@ class EmersonComponent extends Component {
     //    window.QueueIt.validateUser();
     // }
     componentDidMount() { // react Component method
-        console.log('checking window', window);
+        // console.log('checking window', window);
         window.QueueIt.validateUser();
         this.refreshArtists();
       }
     
       refreshArtists = () => {
-        // just like $.ajax()
+        console.log('clicked emerson fired');
         axios({
           method: 'GET',
-          url: '/#/emerson'
+          url: '/test'
         }).then((response) => {
-          console.log(response);
-          // response.data will be the array of artists
-          this.props.dispatch({
-            type: 'GET_ARTISTS',
-            payload: response.data
-          })
+          console.log(response.data);
+          
         }).catch((err)=>{
         console.log('error: ', err)
         });
