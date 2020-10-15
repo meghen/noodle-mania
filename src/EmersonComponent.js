@@ -5,6 +5,9 @@ import axios from 'axios';
 import {connect} from 'react-redux';
 
 class EmersonComponent extends Component {
+    state = {
+        quote: ''
+    }
     //   componentDidMount = () => {
     //    console.log('checking window', window);
     //    window.QueueIt.validateUser();
@@ -22,7 +25,9 @@ class EmersonComponent extends Component {
           url: '/test'
         }).then((response) => {
           console.log(response.data);
-          
+          this.setState({
+              quote: response.data.quote
+            })
         }).catch((err)=>{
         console.log('error: ', err)
         });
@@ -40,6 +45,7 @@ class EmersonComponent extends Component {
         return (
             <div>
                 <h1>THIS IS EMERSONS PAGE</h1>
+                {this.state.quote}
                 {this.createArtistList()}
             </div>
         )
