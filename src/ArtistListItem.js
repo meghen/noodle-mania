@@ -14,10 +14,10 @@ class ArtistListItem extends Component {
     }
     render() {
         return (
-            <tr>
-                <td>{this.props.artist.name}</td>
-                <td><button onClick={this.deleteArtist}>DELETE</button></td>
-            </tr>
+            <>
+                <p>{this.props.artist.name}
+                <button onClick={this.deleteArtist}>DELETE</button></p>
+            </>
         );
     }
 }
