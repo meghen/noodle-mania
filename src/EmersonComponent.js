@@ -26,7 +26,6 @@ class EmersonComponent extends Component {
           method: 'GET',
           url: '/test'
         }).then((response) => {
-          window.QueueIt.validateUser();
           console.log(response.data);
           this.setState({
               quote: response.data.quote
